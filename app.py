@@ -58,4 +58,4 @@ NICHE_CATEGORIES = {
     "🏠 Home & DIY": ["Interior Design", "DIY Projects", "Cooking & Recipes", "Gardening", "Organization"],
 }
 
-VIRAL_HOOKS = ["Nobody talks about this but...", "I spent [X] years learning what I'm about to tell you in [Y] minutes...", "Stop doing [X] if
+VIRAL_HOOKS = ["Nobody talks about this but...", "I spent years learning what I am about to tell you", "Stop doing this if you want to succeed"]
