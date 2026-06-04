@@ -47,15 +47,17 @@ PLATFORMS = {
 
 SCRIPT_STYLES = ["🔥 Ultra Viral Hook Style", "📖 Storytelling Narrative", "🎭 Dramatic Reveal", "💡 Educational Breakdown", "😂 Humor & Entertainment", "😤 Controversy & Opinion", "🤯 Mind-Blowing Facts", "💰 AIDA Sales Formula", "🔢 Listicle Format", "❓ Question-Driven", "📊 Data-Backed Authority", "🌊 Emotional Journey"]
 
+SCRIPT_STYLES = ["🔥 Ultra Viral Hook Style", "💬 Storytelling Narrative", "🎭 Dramatic Reveal", "💡 Educational Breakdown"]
+
 NICHE_CATEGORIES = {
-    "💰 Business & Finance": ["Entrepreneurship", "Investing", "Side Hustles", "Marketing", "E-commerce", "Crypto", "Real Estate"],
-    "🏋️ Health & Fitness": ["Gym & Workout", "Weight Loss", "Mental Health", "Nutrition", "Biohacking", "Yoga"],
-    "🎮 Entertainment": ["Gaming", "Movies & TV", "Music", "Comedy", "Anime", "Sports"],
-    "🛠️ Tech & AI": ["Artificial Intelligence", "Software Dev", "Gadgets", "Cybersecurity", "Apps & Tools", "Web3"],
-    "✈️ Travel & Lifestyle": ["Travel Vlogs", "Luxury Lifestyle", "Budget Travel", "Food & Cuisine", "Fashion"],
-    "📚 Education": ["Science", "History", "Philosophy", "Languages", "Self-Help", "Psychology"],
-    "💄 Beauty & Fashion": ["Makeup", "Skincare", "Fashion Trends", "Haul Videos", "Transformation"],
-    "🏠 Home & DIY": ["Interior Design", "DIY Projects", "Cooking & Recipes", "Gardening", "Organization"],
+    "Business & Finance": ["Entrepreneurship", "Investing", "Side Hustles", "Marketing", "E-commerce", "Crypto", "Real Estate"],
+    "Health & Fitness": ["Gym & Workout", "Weight Loss", "Mental Health", "Nutrition", "Biohacking", "Yoga"],
+    "Entertainment": ["Gaming", "Movies & TV", "Music", "Comedy", "Anime", "Sports"],
+    "Tech & AI": ["Artificial Intelligence", "Software Dev", "Gadgets", "Cybersecurity", "Apps & Tools", "Web3"],
+    "Travel & Lifestyle": ["Travel Vlogs", "Luxury Lifestyle", "Budget Travel", "Food & Cuisine", "Fashion"],
+    "Education": ["Science", "History", "Philosophy", "Languages", "Self-Help", "Psychology"],
+    "Beauty & Fashion": ["Makeup", "Skincare", "Fashion Trends", "Haul Videos", "Transformation"],
+    "Home & DIY": ["Interior Design", "DIY Projects", "Cooking & Recipes", "Gardening", "Organization"]
 }
 
 VIRAL_HOOKS = ["Nobody talks about this but...", "I spent years learning what I am about to tell you", "Stop doing this if you want to succeed"]
