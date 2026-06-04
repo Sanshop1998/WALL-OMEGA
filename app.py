@@ -1,13 +1,17 @@
 import streamlit as st
-from google import genai
-from google.genai import types as genai_types
 import os
 import json
 import time
 from datetime import datetime
-from dotenv import load_dotenv
+import google.generativeai as genai
 
-load_dotenv()
+# Konfigurasi halaman
+st.set_page_config(
+    page_title="WALL OMEGA - AI Viral Script Generator",
+    page_icon="⚡",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 st.set_page_config(
     page_title="WALL OMEGA — AI Viral Script Generator",
