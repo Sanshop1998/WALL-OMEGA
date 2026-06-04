@@ -1,32 +1,47 @@
 import streamlit as st
 import google.generativeai as genai
 
-st.set_page_config(page_title="WALL OMEGA", layout="wide")
+# Setup Halaman
+st.set_page_config(page_title="WALL OMEGA | Pro", layout="wide")
 
-# Mengambil kunci dengan cara yang lebih aman
+# Mengambil API Key dari Secrets
 api_key = st.secrets.get("GEMINI_API_KEY")
 
 if not api_key:
-    st.error("API Key belum diset! Pergi ke Settings > Secrets di Dashboard Streamlit.")
+    st.error("API Key belum diset! Masukkan di Settings > Secrets.")
     st.stop()
 
-try:
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-pro')
-except Exception as e:
-    st.error(f"Gagal koneksi ke AI: {e}")
-    st.stop()
+# Konfigurasi AI
+genai.configure(api_key=api_key)
+# Menggunakan model flash yang super cepat dan sangat cerdas untuk konten viral
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    system_instruction="Kamu adalah pakar konten viral kelas dunia. Tugasmu adalah membuat skrip yang hook-nya mematikan, retensinya tinggi, dan bahasanya persuasif. Selalu gunakan format yang rapi (poin-poin, emoji secukupnya, dan CTA yang kuat)."
+)
 
-st.title("🚀 WALL OMEGA | AI Engine")
-topic = st.text_input("Masukkan topik konten:")
+# UI Keren
+st.title("⚡ WALL OMEGA | AI Engine")
+st.subheader("Dominasi Algoritma dengan Konten Berbasis AI")
 
-if st.button("Generate"):
-    if topic:
-        with st.spinner("Sedang memproses..."):
-            try:
-                response = model.generate_content(f"Buat skrip viral tentang: {topic}")
-                st.markdown(response.text)
-            except Exception as e:
-                st.error(f"Error AI: {e}")
-    else:
-        st.warning("Masukkan topik dulu!")
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    topic = st.text_input("Topik Utama:")
+    platform = st.selectbox("Platform Target:", ["TikTok", "Instagram Reels", "YouTube Shorts", "Twitter/X Thread"])
+    tone = st.select_slider("Tone Suara:", options=["Formal", "Edukatif", "Provokatif", "Santai/Gokil"])
+    btn = st.button("🚀 Generate Konten Viral")
+
+with col2:
+    if btn:
+        if topic:
+            with st.spinner("Sedang meracik konten tingkat dewa..."):
+                try:
+                    prompt = f"Buat skrip {platform} dengan tone {tone} untuk topik: {topic}. Pastikan ada Hook di 3 detik pertama, isi yang padat, dan Call to Action di akhir."
+                    response = model.generate_content(prompt)
+                    st.markdown("---")
+                    st.markdown(response.text)
+                    st.success("Konten berhasil diracik!")
+                except Exception as e:
+                    st.error(f"Gagal generate: {e}")
+        else:
+            st.warning("Masukkan topik terlebih dahulu, Founder!")
